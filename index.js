@@ -11,6 +11,8 @@ appDiv.innerHTML = `
 
 const subject = new Subject();
 
+console.log(`subject is ${subject.closed ? 'closed' : 'open'}`);
+
 subject.subscribe({
   next: (v) => console.log(`observerA`, v),
   error: (err) => console.error(`observerA err`, err),
